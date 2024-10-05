@@ -79,13 +79,22 @@ class _ScreenHomeState extends State<ScreenHome> {
                                 return Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    MyText(fontSize: 20, data: "Welcome  "),
+                                    const MyText(
+                                      fontSize: 20,
+                                      data: "Welcome  ",
+                                      color: Colors.white,
+                                    ),
                                     MyText(
-                                        fontSize: 25, data: snapshot.data!.name)
+                                        fontSize: 25,
+                                        data: snapshot.data!.name,
+                                        color: Colors.white)
                                   ],
                                 );
                               } else {
-                                return MyText(fontSize: 20, data: "Error");
+                                return const MyText(
+                                  fontSize: 20,
+                                  data: "Error",
+                                );
                               }
                             }
                           }),
